@@ -76,6 +76,33 @@ h2{
 
 }
 
+.cards{
+	padding: 30px 60px;
+	margin-bottom: 60px;
+}
+
+.cards h2{
+	text-align: center;
+	color:#fff;
+}
+
+.cards .grid{
+	display: flexbox;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cards article{
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	background: #ffffff;
+	overflow: hidden;
+	border-radius: 4px;
+}
+
 .rodape {
 	overflow: hidden;
 	width: 100%;
