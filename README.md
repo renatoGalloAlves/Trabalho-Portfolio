@@ -1,2 +1,2 @@
 # Trabalho-Portfólio
-Curriculo online (ficticio)
+Curriculo online (ficticio)/ encerrado o Desktop.
