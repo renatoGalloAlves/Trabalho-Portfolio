@@ -189,26 +189,41 @@ article span{
 		z-index: 10;
 		margin-left: -100%;
 		transition: all ease-in-out 0.5s;
-	
+		position: fixed;
 	}
 	.menu-mobile{
-		background-color:#2A9D8F;
 		position: relative;
 		font-family: 'Montserrat';
 		list-style: none;
 		width: 100%;
 		margin: 10px;
 		padding: 10px;
-
+		
 	}
-
+	
 	.menu-mobile li{
 		list-style: none;
 		position: relative;
 		font-family: 'Montserrat';
 		display: flex;
 		padding: 10px;
+		margin: 10px o;
 
+	}
+
+	.menu-mobile li>a{
+		color: #E3EEF2;
+		text-decoration: none;
+		transition: .3s ease-in-out all;
+		background-color:#6DAB8E ;
+		width: 100%;
+		
+		
+	}
+
+	.menu-mobile li>a:hover{
+		background-color:#6DAB8E ;
+		width: 100%;
 	}
 	
 	#menu-icon{
@@ -225,6 +240,11 @@ article span{
 	
 	#menu-toggle:checked ~ #side-menu {
 		margin-left: 0px;
+	}
+
+	
+	.imagem-principal{
+		padding-bottom: 150px;
 	}
 
 	
