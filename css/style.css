@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background:#2A9D8F;
+  	background:#2A9D8F;
 	max-width: 100%;
 	height: 60px;
 	box-shadow: 2px 2px 2px #000;
@@ -145,3 +145,134 @@ article span{
 }
 
 
+/* parte mobile */
+
+@media (max-width: 479px){
+	.logo{
+		display: none;
+	}
+	
+	.menu{
+		display: none;
+	}
+	
+	.hamburger {
+		display: block;
+	}
+	
+	.image-profile {
+		margin: 20px 0px;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background-color: #E3EEF2;
+	}
+	
+	.name-profile {
+		font-family: 'Montserrat';
+		color: #E3EEF2;
+		font-weight: 700;
+		font-size: 20px;
+	}
+	
+	#side-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #005d81;
+		height: 100%;
+		width: 100%;
+		max-width: 400px;
+		z-index: 10;
+		margin-left: -100%;
+		transition: all ease-in-out 0.5s;
+		position: fixed;
+	}
+	.menu-mobile{
+		position: relative;
+		font-family: 'Montserrat';
+		list-style: none;
+		width: 100%;
+		margin: 10px;
+		padding: 10px;
+		
+	}
+	
+	.menu-mobile li{
+		list-style: none;
+		position: relative;
+		display: flex;
+		padding: 10px;
+
+	}
+
+	.menu-mobile li>a{
+		color: #E3EEF2;
+		text-decoration: none;
+		display: flex;
+		justify-self: center;
+		transition: .3s ease-in-out all;
+		padding: 20px 0px;
+		background-color: #6DAB8E;
+		width: 100%;
+	}
+
+	.menu-mobile li>a:hover{
+		background-color:#005d81; ;
+		width: 100%;
+	}
+	
+	#menu-icon{
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		font-size: 30px;
+		
+	}
+	
+	#menu-toggle {
+		display: none;
+	}
+	
+	#menu-toggle:checked ~ #side-menu {
+		margin-left: 0px;
+	}
+
+	
+	.imagem-principal{
+		padding-bottom: 150px;
+	}
+
+	
+	.cards{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.rodape {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: calc(100% - 90px);
+		padding: 10px 45px;
+	
+	}
+	
+	.rodape img{
+		position: relative;
+		width: 80px;
+		margin-bottom: 10px;
+		left: 0;
+		top: 0;
+	}
+	
+	.rodape .legend {
+		width: 130px;
+		text-align: center;
+		padding: 0;
+	}
+	
+}
+	
