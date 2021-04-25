@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@300;400;900&display=swap");
 html body {
   font-family: 'Montserrat';
   margin: 0;
@@ -6,5 +7,71 @@ html body {
   background-color: #2A9D8F;
   position: relative;
   top: 0; }
+  html body header {
+    background: #2A9D8F;
+    max-width: 100%;
+    height: 60px;
+    box-shadow: 2px 2px 2px #000;
+    position: relative;
+    top: 0;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    html body header h1 {
+      margin: 0;
+      position: relative; }
+      html body header h1 > img {
+        margin-top: 5px;
+        max-height: 50px; }
+    html body header nav ul {
+      list-style: none;
+      display: flex; }
+      html body header nav ul > li {
+        margin: 0 5px; }
+        html body header nav ul > li > a {
+          color: #E3EEF2;
+          text-decoration: none;
+          font-size: 18px;
+          padding: 6px 20px;
+          font-family: 'Graduate'; }
+          html body header nav ul > li > a:hover {
+            background-color: #264653; }
+  html body h2 {
+    position: relative;
+    padding: 0 calc(43% - 130px);
+    font-family: 'Graduate';
+    color: #E3EEF2;
+    font-weight: 900;
+    font-size: 30px; }
+  html body .imagem-principal {
+    position: relative;
+    padding: 0 calc(45% - 90px);
+    padding-bottom: 80px;
+    max-width: 220px; }
+  html body .cards {
+    padding: 30px 60px;
+    margin-bottom: 60px; }
+    html body .cards .grid {
+      display: flexbox;
+      max-width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+    html body .cards article {
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding: 3px 30px;
+      box-sizing: border-box;
+      background: #264653;
+      overflow: hidden;
+      border-radius: 4px;
+      color: #EFFBFA;
+      font-family: 'Montserrat'; }
+      html body .cards article h3 {
+        font-family: 'Graduate'; }
+      html body .cards article span {
+        font-weight: bold;
+        color: #E3EEF2; }
 
 /*# sourceMappingURL=style.css.map */
