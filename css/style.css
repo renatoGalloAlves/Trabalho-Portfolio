@@ -6,7 +6,8 @@ html body {
   position: relative;
   background-color: #2A9D8F;
   position: relative;
-  top: 0; }
+  top: 0;
+  /* parte mobile */ }
   html body header {
     background: #2A9D8F;
     max-width: 100%;
@@ -37,6 +38,8 @@ html body {
           font-family: 'Graduate'; }
           html body header nav ul > li > a:hover {
             background-color: #264653; }
+  html body .hamburger {
+    display: none; }
   html body h2 {
     position: relative;
     padding: 0 calc(43% - 130px);
@@ -73,5 +76,28 @@ html body {
       html body .cards article span {
         font-weight: bold;
         color: #E3EEF2; }
+  html body .rodape {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    background: #000; }
+    html body .rodape img {
+      position: absolute;
+      top: 10px;
+      left: 45%;
+      max-width: 120px; }
+    html body .rodape .legend {
+      display: flex;
+      justify-content: flex-end;
+      font-family: 'Graduate';
+      font-size: 12px;
+      color: #6DAB8E;
+      padding-right: 30px;
+      margin: 20px; }
+  @media (max-width: 479px) {
+    html body .logo {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
