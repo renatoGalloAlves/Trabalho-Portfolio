@@ -147,6 +147,123 @@ html {
 			.logo {
 				display: none;
 			}
+
+			.menu {
+				display: none;
+			}
+
+			.hamburger {
+				display: block;
+
+				.image-profile {
+					margin: 20px 0px;
+					width: 150px;
+					height: 150px;
+					border-radius: 50%;
+					background-color: #E3EEF2;
+				}
+
+				#side-menu {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					background-color: #005d81;
+					height: 100%;
+					width: 100%;
+					max-width: 400px;
+					z-index: 10;
+					margin-left: -100%;
+					transition: all ease-in-out 0.5s;
+					position: fixed;
+				}
+
+				.name-profile {
+					font-family: 'Montserrat';
+					color: #E3EEF2;
+					font-weight: 700;
+					font-size: 20px;
+
+					.menu-mobile {
+						position: relative;
+						font-family: 'Montserrat';
+						list-style: none;
+						width: 100%;
+						margin: 10px;
+						padding: 10px;
+
+						li {
+							list-style: none;
+							position: relative;
+							display: flex;
+							padding: 10px;
+
+							>a {
+								color: #E3EEF2;
+								text-decoration: none;
+								display: flex;
+								justify-self: center;
+								transition: .3s ease-in-out all;
+								padding: 20px 0px;
+								background-color: #6DAB8E;
+								width: 100%;
+
+								&hover {
+									background-color: #005d81;
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+
+				#menu-icon {
+					position: absolute;
+					top: 10px;
+					right: 20px;
+					font-size: 30px;
+				}
+
+				#menu-toggle {
+					display: none;
+
+					:checked~#side-menu {
+						margin-left: 0px;
+					}
+				}
+			}
+
+			.imagem-principal {
+				padding-bottom: 150px;
+			}
+
+			.cards {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.rodape {
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: calc(100% - 90px);
+				padding: 10px 45px;
+
+				img {
+					position: relative;
+					width: 80px;
+					margin-bottom: 10px;
+					left: 0;
+					top: 0;
+				}
+
+				.legend {
+					width: 130px;
+					text-align: center;
+					padding: 0;
+				}
+			}
 		}
 	}
 }

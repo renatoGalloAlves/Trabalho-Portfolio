@@ -98,6 +98,89 @@ html body {
       margin: 20px; }
   @media (max-width: 479px) {
     html body .logo {
-      display: none; } }
+      display: none; }
+    html body .menu {
+      display: none; }
+    html body .hamburger {
+      display: block; }
+      html body .hamburger .image-profile {
+        margin: 20px 0px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #E3EEF2; }
+      html body .hamburger #side-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #005d81;
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        z-index: 10;
+        margin-left: -100%;
+        transition: all ease-in-out 0.5s;
+        position: fixed; }
+      html body .hamburger .name-profile {
+        font-family: 'Montserrat';
+        color: #E3EEF2;
+        font-weight: 700;
+        font-size: 20px; }
+        html body .hamburger .name-profile .menu-mobile {
+          position: relative;
+          font-family: 'Montserrat';
+          list-style: none;
+          width: 100%;
+          margin: 10px;
+          padding: 10px; }
+          html body .hamburger .name-profile .menu-mobile li {
+            list-style: none;
+            position: relative;
+            display: flex;
+            padding: 10px; }
+            html body .hamburger .name-profile .menu-mobile li > a {
+              color: #E3EEF2;
+              text-decoration: none;
+              display: flex;
+              justify-self: center;
+              transition: .3s ease-in-out all;
+              padding: 20px 0px;
+              background-color: #6DAB8E;
+              width: 100%; }
+              html body .hamburger .name-profile .menu-mobile li > ahover {
+                background-color: #005d81;
+                width: 100%; }
+      html body .hamburger #menu-icon {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px; }
+      html body .hamburger #menu-toggle {
+        display: none; }
+        html body .hamburger #menu-toggle :checked ~ #side-menu {
+          margin-left: 0px; }
+    html body .imagem-principal {
+      padding-bottom: 150px; }
+    html body .cards {
+      display: flex;
+      flex-direction: column; }
+    html body .rodape {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% - 90px);
+      padding: 10px 45px; }
+      html body .rodape img {
+        position: relative;
+        width: 80px;
+        margin-bottom: 10px;
+        left: 0;
+        top: 0; }
+      html body .rodape .legend {
+        width: 130px;
+        text-align: center;
+        padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */
