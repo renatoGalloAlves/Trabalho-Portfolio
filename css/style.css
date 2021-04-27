@@ -1,186 +1,258 @@
 @import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@300;400;900&display=swap");
+
 html body {
-  font-family: 'Montserrat';
   margin: 0;
   padding: 0;
-  position: relative;
+  font-family: 'Montserrat';
   background-color: #2A9D8F;
   position: relative;
   top: 0;
-  /* parte mobile */ }
-  html body header {
-    background: #2A9D8F;
-    max-width: 100%;
-    height: 60px;
-    box-shadow: 2px 2px 2px #000;
-    position: relative;
-    top: 0;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    html body header h1 {
-      margin: 0;
-      position: relative; }
-      html body header h1 > img {
-        margin-top: 5px;
-        max-height: 50px; }
-    html body header nav ul {
-      list-style: none;
-      display: flex; }
-      html body header nav ul > li {
-        margin: 0 5px; }
-        html body header nav ul > li > a {
-          color: #E3EEF2;
-          text-decoration: none;
-          font-size: 18px;
-          padding: 6px 20px;
-          font-family: 'Graduate'; }
-          html body header nav ul > li > a:hover {
-            background-color: #264653; }
+  /* parte mobile */
+}
+
+html body header {
+  align-items: center;
+  background: #2A9D8F;
+  box-shadow: 2px 2px 2px #000;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0 30px;
+  position: relative;
+  top: 0;
+}
+
+html body header h1 {
+  margin: 0;
+  position: relative;
+}
+
+html body header h1>img {
+  margin-top: 5px;
+  max-height: 50px;
+}
+
+html body header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+html body header nav ul>li {
+  margin: 0 5px;
+}
+
+html body header nav ul>li>a {
+  font-family: 'Graduate';
+  color: #E3EEF2;
+  font-size: 18px;
+  padding: 6px 20px;
+  text-decoration: none;
+}
+
+html body header nav ul>li>a:hover {
+  background-color: #264653;
+}
+
+html body .hamburger {
+  display: none;
+}
+
+html body h2 {
+  font-family: 'Graduate';
+  color: #E3EEF2;
+  font-size: 30px;
+  font-weight: 900;
+  padding: 0 calc(43% - 130px);
+  position: relative;
+}
+
+html body .imagem-principal {
+  max-width: 220px;
+  padding-bottom: 80px;
+  padding: 0 calc(45% - 90px);
+  position: relative;
+}
+
+html body .cards {
+  margin-bottom: 60px;
+  padding: 30px 60px;
+}
+
+html body .cards .grid {
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 100%;
+}
+
+html body .cards article {
+  font-family: 'Montserrat';
+  background: #264653;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #EFFBFA;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  padding: 3px 30px;
+}
+
+html body .cards article h3 {
+  font-family: 'Graduate';
+}
+
+html body .cards article span {
+  font-weight: bold;
+  color: #E3EEF2;
+}
+
+html body .rodape {
+  background: #000;
+  bottom: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+html body .rodape img {
+  left: 45%;
+  max-width: 120px;
+  position: absolute;
+  top: 10px;
+}
+
+html body .rodape .legend {
+  font-family: 'Graduate';
+  color: #6DAB8E;
+  display: flex;
+  font-size: 12px;
+  justify-content: flex-end;
+  margin: 20px;
+  padding-right: 30px;
+}
+
+@media (max-width: 479px) {
+
+  html body .logo,
+  html body .menu {
+    display: none;
+  }
+
   html body .hamburger {
-    display: none; }
-  html body h2 {
-    position: relative;
-    padding: 0 calc(43% - 130px);
-    font-family: 'Graduate';
-    color: #E3EEF2;
-    font-weight: 900;
-    font-size: 30px; }
-  html body .imagem-principal {
-    position: relative;
-    padding: 0 calc(45% - 90px);
-    padding-bottom: 80px;
-    max-width: 220px; }
-  html body .cards {
-    padding: 30px 60px;
-    margin-bottom: 60px; }
-    html body .cards .grid {
-      display: flexbox;
-      max-width: 100%;
-      flex-wrap: wrap;
-      justify-content: space-around; }
-    html body .cards article {
-      margin-left: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      padding: 3px 30px;
-      box-sizing: border-box;
-      background: #264653;
-      overflow: hidden;
-      border-radius: 4px;
-      color: #EFFBFA;
-      font-family: 'Montserrat'; }
-      html body .cards article h3 {
-        font-family: 'Graduate'; }
-      html body .cards article span {
-        font-weight: bold;
-        color: #E3EEF2; }
-  html body .rodape {
-    overflow: hidden;
-    width: 100%;
+    display: block;
+  }
+
+  html body .hamburger #side-menu {
+    align-items: center;
+    background-color: #005d81;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: -100%;
+    max-width: 400px;
     position: fixed;
+    transition: all ease-in-out 0.5s;
+    width: 100%;
     z-index: 10;
-    bottom: 0;
-    background: #000; }
-    html body .rodape img {
-      position: absolute;
-      top: 10px;
-      left: 45%;
-      max-width: 120px; }
-    html body .rodape .legend {
-      display: flex;
-      justify-content: flex-end;
-      font-family: 'Graduate';
-      font-size: 12px;
-      color: #6DAB8E;
-      padding-right: 30px;
-      margin: 20px; }
-  @media (max-width: 479px) {
-    html body .logo {
-      display: none; }
-    html body .menu {
-      display: none; }
-    html body .hamburger {
-      display: block; }
-      html body .hamburger #side-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #005d81;
-        height: 100%;
-        width: 100%;
-        max-width: 400px;
-        z-index: 10;
-        margin-left: -100%;
-        transition: all ease-in-out 0.5s;
-        position: fixed; }
-        html body .hamburger #side-menu .image-profile {
-          margin: 20px 0px;
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
-          background-color: #E3EEF2; }
-        html body .hamburger #side-menu .name-profile {
-          font-family: 'Montserrat';
-          color: #E3EEF2;
-          font-weight: 700;
-          font-size: 20px; }
-        html body .hamburger #side-menu .menu-mobile {
-          position: relative;
-          font-family: 'Montserrat';
-          list-style: none;
-          width: 100%;
-          margin: 10px;
-          padding: 10px; }
-          html body .hamburger #side-menu .menu-mobile li {
-            list-style: none;
-            position: relative;
-            display: flex;
-            padding: 10px; }
-            html body .hamburger #side-menu .menu-mobile li > a {
-              color: #E3EEF2;
-              text-decoration: none;
-              display: flex;
-              justify-self: center;
-              transition: .3s ease-in-out all;
-              padding: 20px 0px;
-              background-color: #6DAB8E;
-              width: 100%; }
-              html body .hamburger #side-menu .menu-mobile li > a:hover {
-                background-color: #005d81;
-                width: 100%; }
-      html body .hamburger #menu-icon {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 30px; }
-      html body .hamburger #menu-toggle {
-        display: none; }
-        html body .hamburger #menu-toggle:checked ~ #side-menu {
-          margin-left: 0px; }
-    html body .imagem-principal {
-      padding-bottom: 150px; }
-    html body .cards {
-      display: flex;
-      flex-direction: column; }
-    html body .rodape {
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: calc(100% - 90px);
-      padding: 10px 45px; }
-      html body .rodape img {
-        position: relative;
-        width: 80px;
-        margin-bottom: 10px;
-        left: 0;
-        top: 0; }
-      html body .rodape .legend {
-        width: 130px;
-        text-align: center;
-        padding: 0; } }
+  }
+
+  html body .hamburger #side-menu .image-profile {
+    background-color: #E3EEF2;
+    border-radius: 50%;
+    height: 150px;
+    margin: 20px 0px;
+    width: 150px;
+  }
+
+  html body .hamburger #side-menu .name-profile {
+    font-family: 'Montserrat';
+    color: #E3EEF2;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  html body .hamburger #side-menu .menu-mobile {
+    font-family: 'Montserrat';
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+  }
+
+  html body .hamburger #side-menu .menu-mobile li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    position: relative;
+  }
+
+  html body .hamburger #side-menu .menu-mobile li>a {
+    background-color: #6DAB8E;
+    color: #E3EEF2;
+    display: flex;
+    justify-self: center;
+    padding: 20px 0px;
+    text-decoration: none;
+    transition: .3s ease-in-out all;
+    width: 100%;
+  }
+
+  html body .hamburger #side-menu .menu-mobile li>a:hover {
+    background-color: #005d81;
+    width: 100%;
+  }
+
+  html body .hamburger #menu-icon {
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  html body .hamburger #menu-toggle {
+    display: none;
+  }
+
+  html body .hamburger #menu-toggle:checked~#side-menu {
+    margin-left: 0px;
+  }
+
+  html body .imagem-principal {
+    padding-bottom: 150px;
+  }
+
+  html body .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  html body .rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+    width: calc(100% - 90px);
+    padding: 10px 45px;
+  }
+
+  html body .rodape img {
+    position: relative;
+    width: 80px;
+    margin-bottom: 10px;
+    left: 0;
+    top: 0;
+  }
+
+  html body .rodape .legend {
+    width: 130px;
+    text-align: center;
+    padding: 0;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

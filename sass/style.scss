@@ -1,26 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@300;400;900&display=swap');
 
+@mixin reset-space {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin font-principal {
+	font-family: 'Graduate';
+
+}
+
+@mixin font-cards {
+	font-family: 'Montserrat';
+
+}
+
 html {
 	body {
-		font-family: 'Montserrat';
-		margin: 0;
-		padding: 0;
-		position: relative;
+		@include reset-space;
+		@include font-cards;
 		background-color: #2A9D8F;
 		position: relative;
 		top: 0;
 
 		header {
+			align-items: center;
 			background: #2A9D8F;
-			max-width: 100%;
-			height: 60px;
 			box-shadow: 2px 2px 2px #000;
+			display: flex;
+			height: 60px;
+			justify-content: space-between;
+			max-width: 100%;
+			padding: 0 30px;
 			position: relative;
 			top: 0;
-			padding: 0 30px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
 
 			h1 {
 				margin: 0;
@@ -34,18 +53,18 @@ html {
 
 			nav {
 				ul {
-					list-style: none;
 					display: flex;
+					list-style: none;
 
 					>li {
 						margin: 0 5px;
 
 						>a {
+							@include font-principal;
 							color: #E3EEF2;
-							text-decoration: none;
 							font-size: 18px;
 							padding: 6px 20px;
-							font-family: 'Graduate';
+							text-decoration: none;
 
 							&:hover {
 								background-color: #264653;
@@ -61,48 +80,48 @@ html {
 		}
 
 		h2 {
-			position: relative;
-			padding: 0 calc(43% - 130px);
-			font-family: 'Graduate';
+			@include font-principal;
 			color: #E3EEF2;
-			font-weight: 900;
 			font-size: 30px;
+			font-weight: 900;
+			padding: 0 calc(43% - 130px);
+			position: relative;
 
 		}
 
 		.imagem-principal {
-			position: relative;
-			padding: 0 calc(45% - 90px);
-			padding-bottom: 80px;
 			max-width: 220px;
+			padding-bottom: 80px;
+			padding: 0 calc(45% - 90px);
+			position: relative;
 
 		}
 
 		.cards {
-			padding: 30px 60px;
 			margin-bottom: 60px;
+			padding: 30px 60px;
 
 			.grid {
 				display: flexbox;
-				max-width: 100%;
 				flex-wrap: wrap;
 				justify-content: space-around;
+				max-width: 100%;
 			}
 
 			article {
+				@include font-cards;
+				background: #264653;
+				border-radius: 4px;
+				box-sizing: border-box;
+				color: #EFFBFA;
+				margin-bottom: 20px;
 				margin-left: 10px;
 				margin-top: 10px;
-				margin-bottom: 20px;
-				padding: 3px 30px;
-				box-sizing: border-box;
-				background: #264653;
 				overflow: hidden;
-				border-radius: 4px;
-				color: #EFFBFA;
-				font-family: 'Montserrat';
+				padding: 3px 30px;
 
 				h3 {
-					font-family: 'Graduate';
+					@include font-principal;
 
 				}
 
@@ -116,38 +135,36 @@ html {
 		}
 
 		.rodape {
-			overflow: hidden;
-			width: 100%;
-			position: fixed;
-			z-index: 10;
-			bottom: 0;
 			background: #000;
+			bottom: 0;
+			overflow: hidden;
+			position: fixed;
+			width: 100%;
+			z-index: 10;
 
 			img {
-				position: absolute;
-				top: 10px;
 				left: 45%;
 				max-width: 120px;
+				position: absolute;
+				top: 10px;
 			}
 
 			.legend {
-				display: flex;
-				justify-content: flex-end;
-				font-family: 'Graduate';
-				font-size: 12px;
+				@include font-principal;
 				color: #6DAB8E;
-				padding-right: 30px;
+				display: flex;
+				font-size: 12px;
+				justify-content: flex-end;
 				margin: 20px;
+				padding-right: 30px;
 			}
 		}
 
 		/* parte mobile */
 
 		@media (max-width: 479px) {
-			.logo {
-				display: none;
-			}
 
+			.logo,
 			.menu {
 				display: none;
 			}
@@ -156,56 +173,56 @@ html {
 				display: block;
 
 				#side-menu {
-					display: flex;
-					flex-direction: column;
 					align-items: center;
 					background-color: #005d81;
+					display: flex;
+					flex-direction: column;
 					height: 100%;
-					width: 100%;
-					max-width: 400px;
-					z-index: 10;
 					margin-left: -100%;
-					transition: all ease-in-out 0.5s;
+					max-width: 400px;
 					position: fixed;
+					transition: all ease-in-out 0.5s;
+					width: 100%;
+					z-index: 10;
 
 
 					.image-profile {
+						background-color: #E3EEF2;
+						border-radius: 50%;
+						height: 150px;
 						margin: 20px 0px;
 						width: 150px;
-						height: 150px;
-						border-radius: 50%;
-						background-color: #E3EEF2;
 					}
 
 					.name-profile {
-						font-family: 'Montserrat';
+						@include font-cards;
 						color: #E3EEF2;
-						font-weight: 700;
 						font-size: 20px;
+						font-weight: 700;
 					}
 
 					.menu-mobile {
-						position: relative;
-						font-family: 'Montserrat';
+						@include font-cards;
 						list-style: none;
-						width: 100%;
 						margin: 10px;
 						padding: 10px;
+						position: relative;
+						width: 100%;
 
 						li {
-							list-style: none;
-							position: relative;
 							display: flex;
+							list-style: none;
 							padding: 10px;
+							position: relative;
 
 							>a {
+								background-color: #6DAB8E;
 								color: #E3EEF2;
-								text-decoration: none;
 								display: flex;
 								justify-self: center;
-								transition: .3s ease-in-out all;
 								padding: 20px 0px;
-								background-color: #6DAB8E;
+								text-decoration: none;
+								transition: .3s ease-in-out all;
 								width: 100%;
 
 								&:hover {
@@ -218,10 +235,10 @@ html {
 				}
 
 				#menu-icon {
-					position: absolute;
-					top: 10px;
-					right: 20px;
 					font-size: 30px;
+					position: absolute;
+					right: 20px;
+					top: 10px;
 				}
 
 				#menu-toggle {
@@ -243,11 +260,9 @@ html {
 			}
 
 			.rodape {
+				@include flex-center;
 				position: fixed;
-				display: flex;
 				flex-direction: column;
-				justify-content: center;
-				align-items: center;
 				width: calc(100% - 90px);
 				padding: 10px 45px;
 
