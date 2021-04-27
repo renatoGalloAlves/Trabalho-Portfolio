@@ -103,12 +103,6 @@ html body {
       display: none; }
     html body .hamburger {
       display: block; }
-      html body .hamburger .image-profile {
-        margin: 20px 0px;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: #E3EEF2; }
       html body .hamburger #side-menu {
         display: flex;
         flex-direction: column;
@@ -121,24 +115,30 @@ html body {
         margin-left: -100%;
         transition: all ease-in-out 0.5s;
         position: fixed; }
-      html body .hamburger .name-profile {
-        font-family: 'Montserrat';
-        color: #E3EEF2;
-        font-weight: 700;
-        font-size: 20px; }
-        html body .hamburger .name-profile .menu-mobile {
+        html body .hamburger #side-menu .image-profile {
+          margin: 20px 0px;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background-color: #E3EEF2; }
+        html body .hamburger #side-menu .name-profile {
+          font-family: 'Montserrat';
+          color: #E3EEF2;
+          font-weight: 700;
+          font-size: 20px; }
+        html body .hamburger #side-menu .menu-mobile {
           position: relative;
           font-family: 'Montserrat';
           list-style: none;
           width: 100%;
           margin: 10px;
           padding: 10px; }
-          html body .hamburger .name-profile .menu-mobile li {
+          html body .hamburger #side-menu .menu-mobile li {
             list-style: none;
             position: relative;
             display: flex;
             padding: 10px; }
-            html body .hamburger .name-profile .menu-mobile li > a {
+            html body .hamburger #side-menu .menu-mobile li > a {
               color: #E3EEF2;
               text-decoration: none;
               display: flex;
@@ -147,7 +147,7 @@ html body {
               padding: 20px 0px;
               background-color: #6DAB8E;
               width: 100%; }
-              html body .hamburger .name-profile .menu-mobile li > ahover {
+              html body .hamburger #side-menu .menu-mobile li > a:hover {
                 background-color: #005d81;
                 width: 100%; }
       html body .hamburger #menu-icon {
@@ -157,7 +157,7 @@ html body {
         font-size: 30px; }
       html body .hamburger #menu-toggle {
         display: none; }
-        html body .hamburger #menu-toggle :checked ~ #side-menu {
+        html body .hamburger #menu-toggle:checked ~ #side-menu {
           margin-left: 0px; }
     html body .imagem-principal {
       padding-bottom: 150px; }

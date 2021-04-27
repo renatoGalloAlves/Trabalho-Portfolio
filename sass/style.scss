@@ -155,14 +155,6 @@ html {
 			.hamburger {
 				display: block;
 
-				.image-profile {
-					margin: 20px 0px;
-					width: 150px;
-					height: 150px;
-					border-radius: 50%;
-					background-color: #E3EEF2;
-				}
-
 				#side-menu {
 					display: flex;
 					flex-direction: column;
@@ -175,13 +167,22 @@ html {
 					margin-left: -100%;
 					transition: all ease-in-out 0.5s;
 					position: fixed;
-				}
 
-				.name-profile {
-					font-family: 'Montserrat';
-					color: #E3EEF2;
-					font-weight: 700;
-					font-size: 20px;
+
+					.image-profile {
+						margin: 20px 0px;
+						width: 150px;
+						height: 150px;
+						border-radius: 50%;
+						background-color: #E3EEF2;
+					}
+
+					.name-profile {
+						font-family: 'Montserrat';
+						color: #E3EEF2;
+						font-weight: 700;
+						font-size: 20px;
+					}
 
 					.menu-mobile {
 						position: relative;
@@ -207,7 +208,7 @@ html {
 								background-color: #6DAB8E;
 								width: 100%;
 
-								&hover {
+								&:hover {
 									background-color: #005d81;
 									width: 100%;
 								}
@@ -226,7 +227,7 @@ html {
 				#menu-toggle {
 					display: none;
 
-					:checked~#side-menu {
+					&:checked~#side-menu {
 						margin-left: 0px;
 					}
 				}
